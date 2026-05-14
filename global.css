@@ -1,10 +1,39 @@
 * {
   font-family: "Roboto", sans-serif;
+  font-weight: regular;
 }
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 104px 0 0 0;
+}
+
+h1 {
+  font-size: 3.16rem;
+  font-weight: 900;
+  letter-spacing: 5%;
+}
+h2 {
+  font-size: 2.37rem;
+  font-weight: bold;
+  letter-spacing: 5%;
+}
+h3 {
+  font-size: 1.77rem;
+  font-weight: bold;
+  letter-spacing: 5%;
+}
+
+h4 {
+  font-size: 1.33rem;
+  font-weight: bold;
+  letter-spacing: 5%;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 5%;
 }
 
 :root {
@@ -112,4 +141,58 @@ nav {
   font-size: 1.77rem;
   font-weight: 500;
   letter-spacing: 5%;
+}
+
+footer {
+  background-color: var(--lightgrey);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 12px;
+}
+
+.footer-socials {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.footer-socials a {
+  color: var(--white);
+  font-size: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  border-top: var(--primary-color) 3px solid;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column a {
+  color: var(--white);
+  font-weight: 300;
+}
+.footer-column h5 {
+  margin-bottom: 0;
 }
