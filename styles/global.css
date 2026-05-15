@@ -63,7 +63,7 @@ header {
 }
 
 .page-name {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   color: var(--white);
@@ -107,7 +107,7 @@ header {
   right: 0;
   flex-direction: column;
   background-color: var(--shadowgrey);
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
   transform: translateX(100%);
 }
 .navigation-menu-show {
