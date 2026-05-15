@@ -56,10 +56,23 @@ header {
   left: 0;
   right: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background: #232528;
   box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.25);
+}
+
+.page-name {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--white);
+  font-family: gigantic, sans-serif;
+  font-size: 1.33rem;
+  font-weight: regular;
+  align-self: end;
+  letter-spacing: 5%;
+  padding: 8px 0 8px 0;
 }
 
 .logo {
