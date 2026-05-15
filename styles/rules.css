@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--lightgrey);
+  font-family: "Roboto", sans-serif;
+  color: var(--white);
+}
+
+/* Container */
+
+.container {
+  width: 402px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--lightgrey);
+}
+
+/* Content */
+
+.content-wrapper {
+  background: var(--shadowgrey);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0 -4px 4px var(--primary-color);
+  padding: 20px 16px;
+  margin-top: 20px;
+}
+
+/* Rules */
+
+.rule-card {
+  background: var(--grey);
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* Icon */
+
+.rule-icon {
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+/* Content */
+.rule-content {
+  flex: 1;
+  position: relative;
+}
+
+.rule-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.8px;
+  color: var(--white);
+  padding-right: 36px;
+}
+
+/* Number Badge */
+.rule-number {
+  width: 24px;
+  height: 24px;
+  background: var(--primary-color);
+  color: var(--shadowgrey);
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
