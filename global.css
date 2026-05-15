@@ -86,7 +86,7 @@ header {
 }
 
 .navigation-menu {
-  display: none;
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
@@ -94,9 +94,12 @@ header {
   right: 0;
   flex-direction: column;
   background-color: var(--shadowgrey);
+  transition: .3s ease-in-out;
+  transform: translateX(100%);
 }
 .navigation-menu-show {
   display: flex;
+  transform: translateX(0%);
 }
 
 nav {
