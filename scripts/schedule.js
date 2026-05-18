@@ -2,7 +2,7 @@ let tabs = document.querySelectorAll(".tab-button");
 let panels = document.querySelectorAll(".schedule-panel");
 let colors = ["--rock-color", "--pop-color", "--edm-color"];
 panels.forEach((panel) =>
-  panel.id != "schedule-day-2" ? (panel.hidden = true) : "",
+  panel.id != "schedule-day-1" ? (panel.hidden = true) : "",
 ); // Hide all panels initially
 
 tabs.forEach((tab) => {
