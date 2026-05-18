@@ -55,6 +55,7 @@ h5 {
   --edm-color: #e01a1e;
 }
 
+/* Header */
 header {
   z-index: 100;
   position: fixed;
@@ -66,6 +67,7 @@ header {
   align-items: center;
   background: var(--shadowgrey);
   box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.25);
+  z-index: 10000;
 }
 
 .page-name {
@@ -167,6 +169,115 @@ nav {
   letter-spacing: 5%;
 }
 
+/* Desktop Version */
+@media (min-width: 1024px) {
+  header {
+    height: 96px;
+    padding: 0 48px;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--shadowgrey);
+  }
+
+  /* Logo */
+  .logo {
+    width: 76px;
+    height: 76px;
+    object-fit: contain;
+  }
+
+  /* Center Title */
+  header::after {
+    content: "PRE-SUMMER FESTIVAL";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Gigantic";
+    font-size: 2rem;
+    color: var(--white);
+    white-space: nowrap;
+  }
+
+  /* Hide hamburger and page title */
+  .menu-btn-container {
+    display: none;
+  }
+  .page-name {
+    display: none;
+  }
+
+  /* Desktop nav container */
+  .navigation-menu {
+    position: static;
+    transform: none !important;
+    width: auto;
+    height: auto;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navigation-menu nav {
+    height: auto;
+    width: auto;
+  }
+  .navigation-menu ul {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    margin: 0;
+    padding-bottom: 8px;
+    height: auto;
+  }
+  .navigation-menu li {
+    margin: 0;
+  }
+
+  /* Desktop links */
+  .navigation-menu ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--shadowgrey);
+  }
+
+  /* Icon sizing */
+  .navigation-menu ul li a svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Desktop text */
+  .nav-text {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  /* Hover */
+  .navigation-menu ul li a:hover {
+    opacity: 0.75;
+  }
+
+  /* Active page color */
+  body.map-page-active .navigation-menu a[href="map.html"],
+  body.rules-page-active .navigation-menu a[href="rules.html"],
+  body.schedule-page-active .navigation-menu a[href="schedule.html"],
+  body.tickets-page-active .navigation-menu a[href="tickets.html"],
+  body.lineup-page-active .navigation-menu a[href="lineup.html"],
+  body.aboutus-page-active .navigation-menu a[href="aboutus.html"],
+  body.home-page-active .navigation-menu a[href="index.html"] {
+    color: var(--secondary-color);
+  }
+}
+
+/* Hide close button */
+.close-btn-container {
+  display: none;
+}
+
+/* Footer */
 footer {
   background-color: var(--lightgrey);
   color: var(--white);
