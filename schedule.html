@@ -7,6 +7,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/schedule.css" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -111,20 +112,20 @@
         <button
           class="tab-button"
           role="tab"
-          aria-selected="true"
+          aria-selected="false"
           aria-controls="schedule-day-1"
           id="tab-1"
         >
-          Day 1
+          June 1
         </button>
         <button
           class="tab-button"
           role="tab"
-          aria-selected="false"
+          aria-selected="true"
           aria-controls="schedule-day-2"
           id="tab-2"
         >
-          Day 2
+          June 2
         </button>
         <button
           class="tab-button"
@@ -133,42 +134,245 @@
           aria-controls="schedule-day-3"
           id="tab-3"
         >
-          Day 3
+          June 3
         </button>
       </section>
 
-      <section class="schedule-content">
-        <div
-          class="schedule-panel"
-          role="tabpanel"
-          id="schedule-day-1"
-          tabindex="0"
-          aria-labelledby="tab-1"
-        >
-          <h2>Day 1 - 1 June</h2>
-          <p>Schedule for Day 1 goes here...</p>
-        </div>
-        <div
-          class="schedule-panel"
-          role="tabpanel"
-          id="schedule-day-2"
-          tabindex="-1"
-          aria-labelledby="tab-2"
-        >
-          <h2>Day 2 - 2 June</h2>
-          <p>Schedule for Day 2 goes here...</p>
-        </div>
-        <div
-          class="schedule-panel"
-          role="tabpanel"
-          id="schedule-day-3"
-          tabindex="-1"
-          aria-labelledby="tab-3"
-        >
-          <h2>Day 3 - 3 June</h2>
-          <p>Schedule for Day 3 goes here...</p>
-        </div>
-      </section>
+      <div class="schedule-container">
+        <section class="schedule-content">
+          <div
+            class="schedule-panel"
+            role="tabpanel"
+            id="schedule-day-1"
+            tabindex="0"
+            aria-labelledby="tab-1"
+          >
+            <h2 class="rock-header">Day of ROCK</h2>
+            <div class="main-artist">
+              <h3 class="rock-header">Hypnosis Band</h3>
+              <img src="/assets/images/PSF Logo.png" alt="" />
+            </div>
+
+            <div class="line-container">
+              <div class="timeline-container">
+                <h3 class="selected-color">Timeline</h3>
+              </div>
+
+              <div class="schedule-block">
+                <img src="/assets/images/PSF Logo.png" alt="" />
+                <div class="schedule-block-info">
+                  <h4>SharpBlades</h4>
+                  <div class="time">
+                    <i data-lucide="clock"></i>
+                    <p>19:00 - 20:00</p>
+                  </div>
+                  <div class="location">
+                    <i data-lucide="map-pin"></i>
+                    <p>The Plaza</p>
+                  </div>
+                </div>
+              </div>
+              <div class="schedule-block">
+                <img src="/assets/images/PSF Logo.png" alt="" />
+                <div class="schedule-block-info">
+                  <h4>Disturbance</h4>
+                  <div class="time">
+                    <i data-lucide="clock"></i>
+                    <p>20:00 - 21:30</p>
+                  </div>
+                  <div class="location">
+                    <i data-lucide="map-pin"></i>
+                    <p>The Plaza</p>
+                  </div>
+                </div>
+              </div>
+              <div class="schedule-block">
+                <img src="/assets/images/PSF Logo.png" alt="" />
+                <div class="schedule-block-info">
+                  <h4>Methamorphosis</h4>
+                  <div class="time">
+                    <i data-lucide="clock"></i>
+                    <p>21:45 - 23:00</p>
+                  </div>
+                  <div class="location">
+                    <i data-lucide="map-pin"></i>
+                    <p>The Plaza</p>
+                  </div>
+                </div>
+              </div>
+              <div class="schedule-block">
+                <img src="/assets/images/PSF Logo.png" alt="" />
+                <div class="schedule-block-info">
+                  <h4>Hypnosis Band</h4>
+                  <div class="time">
+                    <i data-lucide="clock"></i>
+                    <p>23:00 - 01:00</p>
+                  </div>
+                  <div class="location">
+                    <i data-lucide="map-pin"></i>
+                    <p>The Plaza</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="schedule-panel"
+            role="tabpanel"
+            id="schedule-day-2"
+            tabindex="-1"
+            aria-labelledby="tab-2"
+          >
+            <h2 class="pop-header">Day of POP</h2>
+            <div class="main-artist">
+              <h3 class="pop-header">Rhythm Guardians</h3>
+              <img src="/assets/images/PSF Logo.png" alt="" />
+            </div>
+
+            <div class="line-container">
+              <div class="timeline-container">
+                <h3 class="selected-color">Timeline</h3>
+              </div>
+
+              <div class="schedule-block">
+                <img src="/assets/images/PSF Logo.png" alt="" />
+                <div class="schedule-block-info">
+                  <h4>Selfless</h4>
+                  <div class="time">
+                    <i data-lucide="clock"></i>
+                    <p>19:00 - 20:00</p>
+                  </div>
+                  <div class="location">
+                    <i data-lucide="map-pin"></i>
+                    <p>Beach Alley</p>
+                  </div>
+                </div>
+              </div>
+              <div class="schedule-block">
+                <img src="/assets/images/PSF Logo.png" alt="" />
+                <div class="schedule-block-info">
+                  <h4>Molly The Beast</h4>
+                  <div class="time">
+                    <i data-lucide="clock"></i>
+                    <p>20:00 - 21:30</p>
+                  </div>
+                  <div class="location">
+                    <i data-lucide="map-pin"></i>
+                    <p>Beach Alley</p>
+                  </div>
+                </div>
+              </div>
+              <div class="schedule-block">
+                <img src="/assets/images/PSF Logo.png" alt="" />
+                <div class="schedule-block-info">
+                  <h4>The BarbenHeimers</h4>
+                  <div class="time">
+                    <i data-lucide="clock"></i>
+                    <p>21:45 - 23:00</p>
+                  </div>
+                  <div class="location">
+                    <i data-lucide="map-pin"></i>
+                    <p>Beach Alley</p>
+                  </div>
+                </div>
+              </div>
+              <div class="schedule-block">
+                <img src="/assets/images/PSF Logo.png" alt="" />
+                <div class="schedule-block-info">
+                  <h4>Rhythm Guardians</h4>
+                  <div class="time">
+                    <i data-lucide="clock"></i>
+                    <p>23:00 - 01:00</p>
+                  </div>
+                  <div class="location">
+                    <i data-lucide="map-pin"></i>
+                    <p>Beach Alley</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="schedule-panel"
+            role="tabpanel"
+            id="schedule-day-3"
+            tabindex="-1"
+            aria-labelledby="tab-3"
+          >
+            <h2 class="edm-header">Day of EDM</h2>
+            <div class="main-artist">
+              <h3 class="edm-header">DJ Amnesia</h3>
+              <img src="/assets/images/edm-artists/djamnesia.png" alt="" />
+            </div>
+
+            <div class="line-container">
+              <div class="timeline-container">
+                <h3 class="selected-color">Timeline</h3>
+              </div>
+
+              <div class="schedule-block">
+                <img src="/assets/images/edm-artists/flipflex.jpg" alt="" />
+                <div class="schedule-block-info">
+                  <h4>FlipFlex</h4>
+                  <div class="time">
+                    <i data-lucide="clock"></i>
+                    <p>19:00-20:00</p>
+                  </div>
+                  <div class="location">
+                    <i data-lucide="map-pin"></i>
+                    <p>Harbor</p>
+                  </div>
+                </div>
+              </div>
+              <div class="schedule-block">
+                <img
+                  src="/assets/images/edm-artists/mrinternational.jpg"
+                  alt=""
+                />
+                <div class="schedule-block-info">
+                  <h4>Mr. International</h4>
+                  <div class="time">
+                    <i data-lucide="clock"></i>
+                    <p>20:00 - 21:30</p>
+                  </div>
+                  <div class="location">
+                    <i data-lucide="map-pin"></i>
+                    <p>Harbor</p>
+                  </div>
+                </div>
+              </div>
+              <div class="schedule-block">
+                <img src="/assets/images/edm-artists/smogmakers.jpg" alt="" />
+                <div class="schedule-block-info">
+                  <h4>The Smogmakers</h4>
+                  <div class="time">
+                    <i data-lucide="clock"></i>
+                    <p>21:45 - 23:00</p>
+                  </div>
+                  <div class="location">
+                    <i data-lucide="map-pin"></i>
+                    <p>Harbor</p>
+                  </div>
+                </div>
+              </div>
+              <div class="schedule-block">
+                <img src="/assets/images/edm-artists/djamnesia.png" alt="" />
+                <div class="schedule-block-info">
+                  <h4>DJ Amnesia</h4>
+                  <div class="time">
+                    <i data-lucide="clock"></i>
+                    <p>23:00 - 01:00</p>
+                  </div>
+                  <div class="location">
+                    <i data-lucide="map-pin"></i>
+                    <p>Harbor</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
 
     <footer>

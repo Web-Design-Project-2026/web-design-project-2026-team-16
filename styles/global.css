@@ -1,6 +1,8 @@
 * {
   font-family: "Roboto", sans-serif;
   font-weight: regular;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -54,12 +56,13 @@ h5 {
 }
 
 header {
+  z-index: 100;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background: var(--shadowgrey);
   box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.25);
@@ -103,6 +106,7 @@ header {
 }
 
 .navigation-menu {
+  z-index: 1000;
   display: flex;
   position: fixed;
   top: 0;
@@ -141,7 +145,7 @@ nav {
 .navigation-menu ul {
   display: flex;
   flex-direction: column;
-  margin: 0;
+  margin: 0 0 0 48px;
   list-style: none;
   height: 65%;
   justify-content: space-evenly;
@@ -187,6 +191,14 @@ footer {
   font-size: 20px;
 }
 
+.footer-title {
+  margin: 12px 0 24px 0;
+}
+
+.footer-location {
+  margin-bottom: 8px;
+}
+
 .footer-links {
   display: flex;
   flex-direction: row;
@@ -215,5 +227,5 @@ footer {
   font-weight: 300;
 }
 .footer-column h5 {
-  margin-bottom: 0;
+  margin: 12px 0 8px 0;
 }
