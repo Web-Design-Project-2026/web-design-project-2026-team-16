@@ -1,0 +1,240 @@
+/* 1. Base Mobile Layout (Centered, Aligned & Fluid Downscaling Ready)*/
+.home-main-content {
+  background-color: #1a1a1a;
+  width: 100%;
+  max-width: 100%; /* Prevents desktop widths from bleeding into mobile when tracking back down */
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden; /* Hard boundary constraint ensuring clean reverse scaling response */
+  box-sizing: border-box;
+}
+
+/* Hero Showcase Panel Configuration */
+.hero-showcase {
+  position: relative;
+  height: calc(100vh - 104px);
+  min-height: 540px;
+  max-height: 780px;
+
+  /* FIX FOR THE WHITE SPACE GAP: 
+     Instead of guessing the header's height, we use a minor negative margin to pull the 
+     hero image up behind the fixed header and bridge the gaps across all screen scales! */
+  margin-top: -12px;
+  padding-top: 12px;
+
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, #1a1a1a 96%),
+    url("https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1400&q=80");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 24px;
+  box-sizing: border-box;
+}
+
+.hero-inner-frame {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Mobile titles */
+.hero-main-title {
+  font-family: "gigantic", "Anton", "Arial Black", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.hero-date-line {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.hero-sub-location {
+  font-size: 1rem;
+  color: #cccccc;
+  margin-bottom: 28px;
+}
+
+/* Call to Actions Layout */
+.hero-cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* Action Trigger Elements UI */
+.action-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 240px; /* Limits expansion and enforces standard exact matching button widths */
+  height: 52px; /* Identical matching baseline heights across elements */
+  padding: 0 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  text-align: center;
+  box-sizing: border-box;
+  transition:
+    transform 0.2s,
+    filter 0.2s;
+  margin: 0 auto; /* Absolute center horizontal locked position layout alignment for Mobile */
+}
+
+.action-btn:active {
+  transform: scale(0.97);
+}
+
+.btn-blue {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.btn-blue:hover {
+  filter: brightness(1.15);
+}
+
+.btn-orange {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.btn-orange:hover {
+  filter: brightness(1.15);
+}
+
+/* Lower Cards Grid Frame Layout */
+.festival-info-grid {
+  padding: 40px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center; /* Centers all content text directly down the screen axis on mobile */
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column; /* Vertical alignment stacks cleanly on narrow viewports */
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 3px solid var(--primary-color);
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.card-header h2 {
+  margin: 0;
+  line-height: 1.1;
+}
+
+.card-meta-accent-blue {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.card-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-content-wrapper p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #dddddd;
+  margin: 0;
+}
+
+/* 2. Media Query: Tablets & iPads (min-width: 650px)*/
+@media screen and (min-width: 650px) {
+  .hero-main-title {
+    font-size: 3.5rem;
+  }
+
+  .festival-info-grid {
+    padding: 50px 32px;
+  }
+
+  .hero-cta-group {
+    max-width: 360px;
+  }
+}
+
+/* 3. Media Query: Wide Large Screen Desktop Viewports (min-width: 1024px)*/
+@media screen and (min-width: 1024px) {
+  .hero-showcase {
+    height: 680px;
+    max-height: 700px;
+    margin-top: -6px; /* Re-calibrates the header overlap for a sharp fit on desktop */
+  }
+
+  .hero-main-title {
+    font-size: 4.8rem;
+  }
+
+  /* Changes layout direction to a 3-column row on desktops */
+  .festival-info-grid {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 64px 48px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .info-card {
+    flex: 1;
+    max-width: none;
+    text-align: left; /* Restores standard, crisp left-alignment for modern desktop view */
+  }
+
+  .card-header {
+    flex-direction: row; /* Puts Title and Info date flags side-by-side on desktop grids */
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .card-content-wrapper {
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  .card-content-wrapper p {
+    min-height: 140px; /* Keeps your text boxes looking perfectly uniform and balanced */
+  }
+
+  .btn-orange {
+    margin-top: auto;
+    margin-left: 0; /* Aligns orange buttons nicely to the left corner on desktop viewports */
+  }
+}
