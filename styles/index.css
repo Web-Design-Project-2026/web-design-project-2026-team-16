@@ -23,6 +23,7 @@
   margin-top: -12px;
   padding-top: 12px;
 
+  /*background*/
   background:
     linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, #1a1a1a 96%),
     url("https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1400&q=80");
@@ -49,27 +50,27 @@
   font-weight: 900;
   line-height: 1.1;
   letter-spacing: 0.05em;
-  margin-bottom: 12px;
+  margin-bottom: 16px; /* Adjusted spacing beneath title */
   text-transform: uppercase;
 }
 
 .hero-date-line {
   font-size: 1.25rem;
   font-weight: bold;
-  margin-bottom: 4px;
+  margin-bottom: 6px; /* Clean spacing between date and location */
 }
 
 .hero-sub-location {
   font-size: 1rem;
   color: #cccccc;
-  margin-bottom: 28px;
+  margin-bottom: 32px; /* Balanced spacing directly above the first CTA button */
 }
 
 /* Call to Actions Layout */
 .hero-cta-group {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 20px; /* Increased gap to separate the buttons further, as shown in Figma */
   width: 100%;
   max-width: 300px;
   margin: 0 auto;
@@ -82,18 +83,13 @@
   align-items: center;
   gap: 10px;
   width: 100%;
-  max-width: 240px; /* Limits expansion and enforces standard exact matching button widths */
-  height: 52px; /* Identical matching baseline heights across elements */
-  padding: 0 20px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 8px;
-  text-align: center;
   box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
   transition:
     transform 0.2s,
-    filter 0.2s;
+    filter 0.2s,
+    box-shadow 0.2s;
   margin: 0 auto; /* Absolute center horizontal locked position layout alignment for Mobile */
 }
 
@@ -101,22 +97,45 @@
   transform: scale(0.97);
 }
 
+/* BUTTON BLUE DESIGN */
 .btn-blue {
-  background-color: var(--primary-color);
-  color: var(--white);
+  max-width: 257px;
+  height: 54px;
+  font-size: 21px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1.05px;
+  border-radius: 16px;
+  background: #0052b5;
+  box-shadow: 0px 0px 7px #0052b5;
+  color: #ffffff;
 }
 
 .btn-blue:hover {
   filter: brightness(1.15);
+  box-shadow: 0px 0px 12px #0052b5;
 }
 
+/* BUTTON ORANGE DESIGN */
 .btn-orange {
-  background-color: var(--secondary-color);
-  color: var(--white);
+  width: 166px;
+  height: 48px;
+  background: #ff6131;
+  box-shadow: 0px 0px 7px #ff6131;
+  border-radius: 8px;
+  color: #232528;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+
+  /* Shift button entirely to the right edge on mobile layout views */
+  margin: 0 0 0 auto;
 }
 
 .btn-orange:hover {
-  filter: brightness(1.15);
+  filter: brightness(1.1);
+  box-shadow: 0px 0px 12px #ff6131;
 }
 
 /* Lower Cards Grid Frame Layout */
@@ -132,8 +151,8 @@
 .info-card {
   display: flex;
   flex-direction: column;
-  text-align: center; /* Centers all content text directly down the screen axis on mobile */
-  max-width: 500px;
+  text-align: left; /* Left-align card container context for mobile */
+  max-width: 370px; /* Constrains card widths cleanly to match raw data width measurements */
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
@@ -141,40 +160,55 @@
 
 .card-header {
   display: flex;
-  flex-direction: column; /* Vertical alignment stacks cleanly on narrow viewports */
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  border-bottom: 3px solid var(--primary-color);
+  flex-direction: row; /* Keeping Title and Side-badges flowing horizontally inline */
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 3px solid #229ee9; /* Synchronized matching border accents */
   padding-bottom: 12px;
   margin-bottom: 16px;
+  width: 100%;
 }
 
 .card-header h2 {
   margin: 0;
   line-height: 1.1;
+  color: white;
+  font-size: 38px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.9px;
 }
 
 .card-meta-accent-blue {
-  font-size: 1.1rem;
-  color: var(--primary-color);
-  font-weight: bold;
+  color: #229ee9; /* Snapshot variable matching blue tone */
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+  margin-bottom: 4px; /* Keeps layout baseline aligned with bold headers */
 }
 
 .card-content-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
+  align-items: flex-start; /*Align wrapper nodes nicely to the left axis */
+  width: 100%;
 }
 
 .card-content-wrapper p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #dddddd;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+  line-height: 1.5;
+  color: #ffffff;
   margin: 0;
+  word-wrap: break-word;
+  text-align: left; /*Fixes center-aligned text bugs from current framework */
 }
 
-/* 2. Media Query: Tablets & iPads (min-width: 650px)*/
+/* 2. Media Query: Tablets & iPads (min-width: 650px) */
 @media screen and (min-width: 650px) {
   .hero-main-title {
     font-size: 3.5rem;
@@ -186,10 +220,11 @@
 
   .hero-cta-group {
     max-width: 360px;
+    gap: 16px; /* Slightly tighter grid balancing on tablet screens */
   }
 }
 
-/* 3. Media Query: Wide Large Screen Desktop Viewports (min-width: 1024px)*/
+/* 3. Media Query: Wide Large Screen Desktop Viewports (min-width: 1024px) */
 @media screen and (min-width: 1024px) {
   .hero-showcase {
     height: 680px;
@@ -214,7 +249,7 @@
 
   .info-card {
     flex: 1;
-    max-width: none;
+    max-width: 370px; /* Locks text column box models securely to specified wireframes */
     text-align: left; /* Restores standard, crisp left-alignment for modern desktop view */
   }
 
@@ -224,17 +259,30 @@
     align-items: flex-end;
   }
 
+  .card-header h2 {
+    font-size: 48px; /* Desktop Header scale configuration restored */
+    letter-spacing: 2px;
+  }
+
+  .card-meta-accent-blue {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
   .card-content-wrapper {
     height: 100%;
     justify-content: space-between;
+    align-items: flex-start;
   }
 
   .card-content-wrapper p {
-    min-height: 140px; /* Keeps your text boxes looking perfectly uniform and balanced */
+    font-size: 20px;
+    letter-spacing: 1px;
+    min-height: 150px; /* Keeps your text boxes looking perfectly uniform and balanced */
   }
 
   .btn-orange {
     margin-top: auto;
-    margin-left: 0; /* Aligns orange buttons nicely to the left corner on desktop viewports */
+    margin-right: 0; /* Aligns orange buttons nicely to the right corner on desktop viewports */
   }
 }
