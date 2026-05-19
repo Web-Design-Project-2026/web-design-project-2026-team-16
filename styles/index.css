@@ -1,9 +1,9 @@
 /* 1. Base Mobile Layout (Centered, Aligned & Fluid Downscaling Ready)*/
 .home-main-content {
-  background-color: #1a1a1a;
+  background-color: var(--shadowgrey);
   width: 100%;
   max-width: 100%; /* Prevents desktop widths from bleeding into mobile when tracking back down */
-  color: #ffffff;
+  color: var(--white);
   display: flex;
   flex-direction: column;
   overflow-x: hidden; /* Hard boundary constraint ensuring clean reverse scaling response */
@@ -13,6 +13,7 @@
 /* Hero Showcase Panel Configuration */
 .hero-showcase {
   position: relative;
+  overflow: hidden;
   height: calc(100vh - 104px);
   min-height: 540px;
   max-height: 780px;
@@ -23,12 +24,7 @@
   margin-top: -12px;
   padding-top: 12px;
 
-  /*background*/
-  background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, #1a1a1a 96%),
-    url("https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1400&q=80");
-  background-size: cover;
-  background-position: center;
+  background: var(--shadowgrey);
   display: flex;
   align-items: flex-end;
   padding-left: 16px;
@@ -37,10 +33,54 @@
   box-sizing: border-box;
 }
 
+.hero-showcase video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.hero-showcase::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    var(--shadowgrey) 96%
+  );
+  z-index: 1;
+}
+
+#pause-play-btn {
+  position: absolute;
+  top: 24px;
+  left: 16px;
+  width: 44px;
+  height: 44px;
+  z-index: 2;
+  color: var(--white);
+  border-radius: 50%;
+  padding: 8px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+#pause-play-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
 .hero-inner-frame {
   width: 100%;
   text-align: center;
   margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
 }
 
 /* Mobile titles */
@@ -78,6 +118,7 @@
 
 /* Action Trigger Elements UI */
 .action-btn {
+  background-color: var(--secondary-color);
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -106,24 +147,24 @@
   font-weight: 600;
   letter-spacing: 1.05px;
   border-radius: 16px;
-  background: #0052b5;
-  box-shadow: 0px 0px 7px #0052b5;
-  color: #ffffff;
+  background: var(--primary-variant);
+  box-shadow: 0px 0px 7px var(--primary-variant);
+  color: var(--white);
 }
 
 .btn-blue:hover {
   filter: brightness(1.15);
-  box-shadow: 0px 0px 12px #0052b5;
+  box-shadow: 0px 0px 12px var(--primary-variant);
 }
 
 /* BUTTON ORANGE DESIGN */
 .btn-orange {
   width: 166px;
   height: 48px;
-  background: #ff6131;
-  box-shadow: 0px 0px 7px #ff6131;
+  background: var(--secondary-color);
+  box-shadow: 0px 0px 7px var(--secondary-color);
   border-radius: 8px;
-  color: #232528;
+  color: var(--shadowgrey);
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   font-weight: 600;
@@ -135,7 +176,7 @@
 
 .btn-orange:hover {
   filter: brightness(1.1);
-  box-shadow: 0px 0px 12px #ff6131;
+  box-shadow: 0px 0px 12px var(--secondary-color);
 }
 
 /* Lower Cards Grid Frame Layout */
@@ -163,7 +204,7 @@
   flex-direction: row; /* Keeping Title and Side-badges flowing horizontally inline */
   justify-content: space-between;
   align-items: flex-end;
-  border-bottom: 3px solid #229ee9; /* Synchronized matching border accents */
+  border-bottom: 3px solid var(--primary-color); /* Synchronized matching border accents */
   padding-bottom: 12px;
   margin-bottom: 16px;
   width: 100%;
@@ -172,7 +213,7 @@
 .card-header h2 {
   margin: 0;
   line-height: 1.1;
-  color: white;
+  color: var(--white);
   font-size: 38px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -180,7 +221,7 @@
 }
 
 .card-meta-accent-blue {
-  color: #229ee9; /* Snapshot variable matching blue tone */
+  color: var(--primary-color); /* Snapshot variable matching blue tone */
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -202,7 +243,7 @@
   font-weight: 400;
   letter-spacing: 0.8px;
   line-height: 1.5;
-  color: #ffffff;
+  color: var(--white);
   margin: 0;
   word-wrap: break-word;
   text-align: left; /*Fixes center-aligned text bugs from current framework */
