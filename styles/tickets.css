@@ -1,0 +1,228 @@
+.tickets-page {
+  position: relative;
+  padding: 48px 16px 48px;
+  background: var(--lightgrey);
+  overflow: hidden;
+}
+
+/* Background */
+.content-bg {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 28px);
+  background: var(--shadowgrey);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0 -4px 4px var(--secondary-color);
+  z-index: 0;
+}
+.layout {
+  position: relative;
+  z-index: 2;
+}
+
+/* Sections */
+.ticket-section {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+.section-title {
+  color: var(--white);
+  font-family: "Gigantic";
+  font-size: 1.5rem;
+}
+.section-title.premium {
+  padding-top: 48px;
+}
+
+/* Ticket Cards */
+.ticket-card {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 480px;
+  height: 270px;
+  border-radius: 18px;
+  padding: 0 0 0 8px;
+  background: var(--primary-color);
+  box-shadow: 0 8px 12px -8px var(--white);
+}
+.ticket-side {
+  width: 68px;
+  background: var(--primary-variant);
+  position: relative;
+}
+/* Ticket Cutouts */
+.ticket-side::before,
+.ticket-side::after {
+  content: "";
+  position: absolute;
+  left: -9px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--shadowgrey);
+}
+.ticket-side::before {
+  top: -9px;
+}
+.ticket-side::after {
+  bottom: -9px;
+}
+.ticket-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 22px 18px 80px 22px;
+}
+
+/* Typography */
+.ticket-main h3 {
+  color: var(--shadowgrey);
+  font-size: 1.95rem;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+.ticket-main p {
+  max-width: 240px;
+  color: var(--shadowgrey);
+  font-size: 1.18rem;
+  margin-bottom: 18px;
+}
+.ticket-date {
+  color: var(--shadowgrey);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Price Tag */
+.ticket-price {
+  position: absolute;
+  bottom: 75px;
+  right: 40px;
+  z-index: 5;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--secondary-color);
+  color: var(--shadowgrey);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Quantity Selector */
+.ticket-quantity {
+  position: absolute;
+  height: 52px;
+  width: 90%;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  overflow: hidden;
+  border-radius: 16px;
+}
+.qty-btn {
+  width: 34%;
+  border: none;
+  background: var(--grey);
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.qty-btn:hover {
+  background-color: var(--shadowgrey);
+}
+.qty-display {
+  width: 32%;
+  background: var(--white);
+  color: var(--shadowgrey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+/* Checkout Button */
+.checkout-btn {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  width: 350px;
+  margin: -8px auto -10px;
+  height: 58px;
+  border: none;
+  border-radius: 18px;
+  background: var(--secondary-color);
+  color: var(--shadowgrey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 1.15rem;
+  font-weight: bold;
+  box-shadow:
+    0 0 12px var(--secondary-color),
+    0 4px 8px var(--shadowgrey);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.shopping-basket {
+  width: 34px;
+  height: 34px;
+}
+.checkout-btn:hover {
+  box-shadow:
+    0 0 24px var(--secondary-color),
+    0 8px 16px var(--shadowgrey);
+}
+.checkout-btn:active {
+  border: 2px solid var(--primary-variant);
+  box-shadow:
+    0 0 8px var(--secondary-color),
+    0 2px 4px var(--shadowgrey);
+}
+.checkout-btn:hover:active {
+  border: 2px solid var(--primary-color);
+  box-shadow:
+    0 0 28px var(--secondary-color),
+    0 2px 4px var(--shadowgrey);
+}
+.checkout-btn svg {
+  width: 34px;
+  height: 34px;
+  color: var(--shadowgrey);
+}
+
+/* Desktop Version */
+@media (min-width: 1024px) {
+  .layout {
+    display: grid;
+    grid-template-columns: 480px 480px;
+    justify-content: center;
+    gap: 60px;
+    align-items: start;
+  }
+  .ticket-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 26px;
+  }
+  .section-title {
+    text-align: center;
+  }
+  .section-title.premium {
+    padding-top: 0;
+  }
+}
