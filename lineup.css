@@ -19,6 +19,9 @@
    ========================================================================== */
 .lineup-grid {
   display: grid;
+  grid-template-columns: 1fr; /* Default Single Column for Mobile */
+  gap: 32px;
+  width: 100%;
   max-width: 450px; /* Restricts cards from exploding too wide on mobile devices */
   margin: 0 auto;
 }
