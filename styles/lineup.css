@@ -1,8 +1,6 @@
-/* ==========================================================================
-   1. Page Layout Base Settings
-   ========================================================================== */
+/* 1. Page Layout Base Settings */
 .lineup-main-content {
-  background-color: #1a1a1a;
+  background-color: #232528; /*Figma's exact canvas color */
   width: 100%;
   max-width: 100%;
   padding: 40px 16px;
@@ -10,29 +8,24 @@
   display: flex;
   justify-content: center;
   overflow-x: hidden;
-  /* Fixes potential header height white spaces on varying device screens */
-  margin-top: -6px;
+  margin-top: -6px; /* Fixes potential header height white spaces on varying device screens */
 }
 
-/* ==========================================================================
-   2. Responsive Grid Structure
-   ========================================================================== */
+/* 2. Responsive Grid Structure */
 .lineup-grid {
   display: grid;
   grid-template-columns: 1fr; /* Default Single Column for Mobile */
   gap: 32px;
   width: 100%;
-  max-width: 450px; /* Restricts cards from exploding too wide on mobile devices */
+  max-width: 346px; /* Restricts card dimensions to match the raw 346px design width constraints */
   margin: 0 auto;
 }
 
-/* ==========================================================================
-   3. Card Container and 3D Flip System Mechanics
-   ========================================================================== */
+/* 3. Card Container and 3D Flip System Mechanics */
 .artist-card-container {
   background-color: transparent;
   width: 100%;
-  height: 280px; /* Standard structural card height */
+  height: 275px; /* Restructured total card height (227px image + 48px label block) */
   perspective: 1000px; /* Required for the 3D depth flip effect */
   cursor: pointer;
 }
@@ -58,26 +51,73 @@
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari support feature safeguard */
   backface-visibility: hidden;
-  border-radius: 6px;
+  border-radius: 8px; /* Fixed border-radius settings matching design files */
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
 /* Front Face Styles */
+.rock-header {
+  color: var(--white);
+  font-family: "Anton", sans-serif;
+  margin-bottom: 8px;
+  text-align: center;
+
+  text-align: center;
+  font-family: Anton;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.05px;
+}
+
+.pop-header {
+  color: var(--white);
+  font-family: montserrat-alternates, sans-serif;
+  margin-bottom: 8px;
+  text-align: center;
+
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 1.05px;
+}
+
+.edm-header {
+  color: var(--white);
+  font-family: strelka, sans-serif;
+  margin-bottom: 8px;
+  text-align: center;
+
+  text-align: center;
+  font-family: Strelka;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 1.05px;
+}
+
 .card-front {
-  background-color: #2a2a2a;
+  background-color: #43464b;
 }
 
 .image-box {
   width: 100%;
-  flex: 1;
+  height: 227px; /* Locks picture block height perfectly to specification specifications */
   background-color: #333333; /* Fallback dark block placeholder */
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   position: relative;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .image-box img {
@@ -93,15 +133,49 @@
 
 /* Custom styled label text containers at card bases matching design layouts */
 .band-label {
-  background-color: #313437;
+  background: #43464b;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+/*Styles for the h3*/
+/*.rocktitle {
+  color: var(--white);
+  font-family: "Anton", sans-serif;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.poptitle {
+  color: var(--white);
+  font-family: montserrat-alternates, sans-serif;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.edmtitle {
+  color: var(--white);
+  font-family: strelka, sans-serif;
+  margin-bottom: 16px;
+  text-align: center;
+}*/
+
+/* Base Typographic Span Config */
+.band-label span,
+.card-back h3 {
   color: #ffffff;
-  font-family: "gigantic", "Anton", "Arial Black", sans-serif;
-  font-size: 1.5rem;
-  letter-spacing: 0.05em;
-  padding: 14px 10px;
-  text-transform: uppercase;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
+  font-size: 21px;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.05px;
+  text-align: center;
+  word-wrap: break-word;
+  text-transform: none; /* Allows individual font family styles to map cleanly */
 }
 
 /* Back Face Styles */
@@ -118,34 +192,56 @@
 }
 
 .card-back h3 {
-  font-family: "gigantic", "Anton", "Arial Black", sans-serif;
-  font-size: 1.8rem;
   margin: 0 0 10px 0;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
 .card-back p {
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #dddddd;
+  /*font-size: 16px;
+  line-height: 1.5;*/
+  color: #ffffff;
   margin: 0;
   flex-grow: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  letter-spacing: 1.05px;
+
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 5%;
 }
 
-/* Border Colored Accent Themes for Different Genres */
-.rock-border {
-  border: 3px solid #824dff;
+/* 4. Specific Genre Theme Rules (Figma Type Attributes & Borders Applied) */
+
+/* ROCK Theme (Anton, Font Weight 400, Purple Accent Line) */
+.rock-theme .band-label {
+  border-top: 1px #824dff solid;
 }
-.pop-border {
-  border: 3px solid #d51a7e;
+.rock-theme .band-label span,
+.rock-theme .card-back h3 {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
 }
-.edm-border {
-  border: 3px solid #e01a1e;
+
+/* POP Theme (Montserrat, Font Weight 800, Pink Accent Line) */
+.pop-theme .band-label {
+  border-top: 1px #d51a7e solid;
+}
+.pop-theme .band-label span,
+.pop-theme .card-back h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+}
+
+/* EDM Theme (Strelka, Font Weight 800, Red Accent Line) */
+.edm-theme .band-label {
+  border-top: 1px #e01a1e solid;
+}
+.edm-theme .band-label span,
+.edm-theme .card-back h3 {
+  font-family: "Strelka", sans-serif;
+  font-weight: 800;
 }
 
 /* Dynamic Genre Pill Tags on Card Backs */
@@ -158,6 +254,7 @@
   border-radius: 20px;
   color: #ffffff;
   margin-top: 12px;
+
   letter-spacing: 0.05em;
 }
 
@@ -171,13 +268,11 @@
   background-color: #e01a1e;
 }
 
-/* ==========================================================================
-   4. Media Query: Tablets & Viewports (min-width: 680px)
-   ========================================================================== */
+/* 5. Media Query: Tablets & Viewports (min-width: 680px)*/
 @media screen and (min-width: 680px) {
   .lineup-grid {
     grid-template-columns: repeat(2, 1fr); /* 2 Columns Grid Layout */
-    max-width: 850px;
+    max-width: 740px;
     gap: 24px;
   }
   .lineup-main-content {
@@ -185,16 +280,14 @@
   }
 }
 
-/* ==========================================================================
-   5. Media Query: Desktop Screen Viewports (min-width: 1024px)
-   ========================================================================== */
+/* 6. Desktop Screen Viewports (min-width: 1024px)*/
 @media screen and (min-width: 1024px) {
   .lineup-grid {
     grid-template-columns: repeat(
       3,
       1fr
-    ); /* 3 Columns Grid Layout exactly matching layout mockups */
-    max-width: 1200px;
+    ); /* 3 Columns Grid Layout matching mockups */
+    max-width: 1120px;
     gap: 40px;
   }
   .lineup-main-content {
@@ -202,6 +295,7 @@
     margin-top: -4px;
   }
 }
+
 .linkschedule {
   text-decoration: none;
   padding: 0;
