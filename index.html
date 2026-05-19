@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/bap7jyo.css" />
     <!-- javascript -->
     <script src="/scripts/global.js" defer></script>
+    <script src="/scripts/index.js" defer></script>
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@0.574.0/dist/umd/lucide.js"></script>
@@ -41,7 +42,7 @@
           />
         </a>
       </div>
-      <div class="page-name">Pagename</div>
+      <div class="page-name">Home</div>
       <div class="menu-btn-container">
         <button class="menu-btn js-nav-toggle" title="Open navigation menu">
           <i data-lucide="menu" stroke-width="1"></i>
@@ -103,6 +104,15 @@
     <!-- start with the page content here -->
     <main class="home-main-content">
       <section class="hero-showcase">
+        <video
+          src="/assets/videos/psf-hero-video-no-grain.mp4"
+          muted
+          autoplay
+          loop
+        ></video>
+        <button id="pause-play-btn" type="button" aria-label="Pause video">
+          <i data-lucide="pause"></i>
+        </button>
         <div class="hero-inner-frame">
           <h1 class="hero-main-title">PRE-SUMMER FESTIVAL</h1>
           <p class="hero-date-line">1 June - 3 June</p>
@@ -235,9 +245,6 @@
 
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <script>
-      lucide.createIcons();
-    </script>
     <script>
       lucide.createIcons();
     </script>

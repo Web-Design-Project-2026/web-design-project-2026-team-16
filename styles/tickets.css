@@ -27,7 +27,9 @@
 .ticket-section {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 26px;
+  margin-bottom: 32px;
 }
 .section-title {
   color: var(--white);
@@ -158,7 +160,8 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 999;
-  width: 350px;
+  max-width: 350px;
+  min-width: 250px;
   margin: -8px auto -10px;
   height: 58px;
   border: none;
@@ -167,8 +170,8 @@
   color: var(--shadowgrey);
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
+  justify-content: space-around;
+  gap: 24px;
   font-size: 1.15rem;
   font-weight: bold;
   box-shadow:
@@ -176,6 +179,13 @@
     0 4px 8px var(--shadowgrey);
   cursor: pointer;
   transition: 0.2s ease;
+  padding: 0 32px;
+}
+
+.checkout-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .shopping-basket {
   width: 34px;

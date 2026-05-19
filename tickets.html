@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/bap7jyo.css" />
     <!-- javascript -->
     <script src="/scripts/global.js" defer></script>
-    <script src="/scripts/schedule.js" defer></script>
+    <script src="/scripts/tickets.js" defer></script>
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@0.574.0/dist/umd/lucide.js"></script>
@@ -118,9 +118,13 @@
             </div>
             <div class="ticket-side"></div>
             <div class="ticket-quantity">
-              <button class="qty-btn">+</button>
+              <button class="qty-btn">
+                <i data-lucide="plus"></i>
+              </button>
               <div class="qty-display">0</div>
-              <button class="qty-btn">−</button>
+              <button class="qty-btn">
+                <i data-lucide="minus"></i>
+              </button>
             </div>
           </div>
           <div class="ticket-card">
@@ -132,9 +136,13 @@
             </div>
             <div class="ticket-side"></div>
             <div class="ticket-quantity">
-              <button class="qty-btn">+</button>
+              <button class="qty-btn">
+                <i data-lucide="plus"></i>
+              </button>
               <div class="qty-display">0</div>
-              <button class="qty-btn">−</button>
+              <button class="qty-btn">
+                <i data-lucide="minus"></i>
+              </button>
             </div>
           </div>
         </section>
@@ -152,9 +160,13 @@
             </div>
             <div class="ticket-side"></div>
             <div class="ticket-quantity">
-              <button class="qty-btn">+</button>
+              <button class="qty-btn">
+                <i data-lucide="plus"></i>
+              </button>
               <div class="qty-display">0</div>
-              <button class="qty-btn">−</button>
+              <button class="qty-btn">
+                <i data-lucide="minus"></i>
+              </button>
             </div>
           </div>
           <div class="ticket-card">
@@ -168,15 +180,23 @@
             </div>
             <div class="ticket-side"></div>
             <div class="ticket-quantity">
-              <button class="qty-btn">+</button>
+              <button class="qty-btn">
+                <i data-lucide="plus"></i>
+              </button>
               <div class="qty-display">0</div>
-              <button class="qty-btn">−</button>
+              <button class="qty-btn">
+                <i data-lucide="minus"></i>
+              </button>
             </div>
           </div>
         </section>
         <!-- Checkout -->
         <button class="checkout-btn">
-          <i data-lucide="shopping-basket"></i>
+          <div class="checkout-info">
+            <p id="total-tickets">0</p>
+            <i data-lucide="shopping-basket"></i>
+          </div>
+
           Proceed to Checkout
         </button>
       </div>
