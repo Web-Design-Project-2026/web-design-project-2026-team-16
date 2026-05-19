@@ -1,7 +1,5 @@
 const keys = ["3pass", "1pass", "3premium", "1premium", "totalTickets"];
 
-initializeTickets();
-
 document.querySelectorAll(".qty-btn").forEach((btn, index) => {
   btn.addEventListener("click", () => {
     const isPlus =
@@ -51,3 +49,26 @@ function updateTotal() {
   document.querySelector("#total-tickets").textContent = total;
   localStorage.setItem("totalTickets", total);
 }
+
+function adjustCheckoutButtonPosition() {
+  const checkoutButton = document.querySelector(".checkout-btn");
+  const pageFooter = document.querySelector("footer");
+  if (!checkoutButton || !pageFooter) {
+    return;
+  }
+
+  const footerRect = pageFooter.getBoundingClientRect();
+  const overlap = Math.max(0, window.innerHeight - footerRect.top);
+
+  if (overlap > 0) {
+    checkoutButton.style.bottom = `${overlap + 20 }px`;
+  } else {
+    checkoutButton.style.bottom = "";
+  }
+}
+
+initializeTickets();
+
+window.addEventListener("scroll", adjustCheckoutButtonPosition);
+window.addEventListener("resize", adjustCheckoutButtonPosition);
+adjustCheckoutButtonPosition();
