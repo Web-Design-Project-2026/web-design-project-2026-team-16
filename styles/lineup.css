@@ -164,6 +164,12 @@
   margin-bottom: 16px;
   text-align: center;
 }*/
+/*links to schedule*/
+.linktoschedule a {
+  color: #ffffff;
+
+  padding-top: 2rem;
+}
 
 /* Base Typographic Span Config */
 .band-label span,
