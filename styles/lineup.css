@@ -1,6 +1,6 @@
 /* 1. Page Layout Base Settings */
 .lineup-main-content {
-  background-color: #232528; /*Figma's exact canvas color */
+  background-color: var(--shadowgrey);
   width: 100%;
   max-width: 100%;
   padding: 40px 16px;
@@ -104,13 +104,13 @@
 }
 
 .card-front {
-  background-color: #43464b;
+  background-color: var(--grey);
 }
 
 .image-box {
   width: 100%;
   height: 227px; /* Locks picture block height perfectly to specification specifications */
-  background-color: #333333; /* Fallback dark block placeholder */
+  background-color: var(--lightgrey); /* Fallback dark block placeholder */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,7 +133,7 @@
 
 /* Custom styled label text containers at card bases matching design layouts */
 .band-label {
-  background: #43464b;
+  background: var(--grey);
   height: 48px;
   display: flex;
   align-items: center;
@@ -143,38 +143,16 @@
   border-bottom-left-radius: 8px;
 }
 
-/*Styles for the h3*/
-/*.rocktitle {
-  color: var(--white);
-  font-family: "Anton", sans-serif;
-  margin-bottom: 8px;
-  text-align: center;
-}
-
-.poptitle {
-  color: var(--white);
-  font-family: montserrat-alternates, sans-serif;
-  margin-bottom: 12px;
-  text-align: center;
-}
-
-.edmtitle {
-  color: var(--white);
-  font-family: strelka, sans-serif;
-  margin-bottom: 16px;
-  text-align: center;
-}*/
 /*links to schedule*/
 .linktoschedule a {
-  color: #ffffff;
-
-  padding-top: 2rem;
+  color: var(--white);
+  padding-top: 40px;
 }
 
 /* Base Typographic Span Config */
 .band-label span,
 .card-back h3 {
-  color: #ffffff;
+  color: var(--white);
   font-size: 21px;
   font-style: normal;
   line-height: normal;
@@ -186,15 +164,15 @@
 
 /* Back Face Styles */
 .card-back {
-  background-color: #232528;
-  color: #ffffff;
+  background-color: var(--grey);
+  color: var(--white);
   transform: rotateY(180deg); /* Pre-rotates the card back surface */
   padding: 24px;
   box-sizing: border-box;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 20px var(--shadowgrey);
 }
 
 .card-back h3 {
@@ -202,27 +180,21 @@
 }
 
 .card-back p {
-  font-family: "Roboto", sans-serif;
-  /*font-size: 16px;
-  line-height: 1.5;*/
-  color: #ffffff;
+  color: var(--white);
   margin: 0;
   flex-grow: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  letter-spacing: 1.05px;
-
   font-size: 1rem;
   font-weight: bold;
-  letter-spacing: 5%;
 }
 
 /* 4. Specific Genre Theme Rules (Figma Type Attributes & Borders Applied) */
 
 /* ROCK Theme (Anton, Font Weight 400, Purple Accent Line) */
 .rock-theme .band-label {
-  border-top: 1px #824dff solid;
+  border-top: var(--rock-color);
 }
 .rock-theme .band-label span,
 .rock-theme .card-back h3 {
@@ -232,7 +204,7 @@
 
 /* POP Theme (Montserrat, Font Weight 800, Pink Accent Line) */
 .pop-theme .band-label {
-  border-top: 1px #d51a7e solid;
+  border-top: var(--pop-color);
 }
 .pop-theme .band-label span,
 .pop-theme .card-back h3 {
@@ -242,7 +214,7 @@
 
 /* EDM Theme (Strelka, Font Weight 800, Red Accent Line) */
 .edm-theme .band-label {
-  border-top: 1px #e01a1e solid;
+  border-top: var(--edm-color);
 }
 .edm-theme .band-label span,
 .edm-theme .card-back h3 {
@@ -258,20 +230,20 @@
   font-size: 0.85rem;
   padding: 6px 16px;
   border-radius: 20px;
-  color: #ffffff;
+  color: var(--white);
   margin-top: 12px;
 
   letter-spacing: 0.05em;
 }
 
 .tag-rock {
-  background-color: #824dff;
+  background-color: var(--rock-color);
 }
 .tag-pop {
-  background-color: #d51a7e;
+  background-color: var(--pop-color);
 }
 .tag-edm {
-  background-color: #e01a1e;
+  background-color: var(--edm-color);
 }
 
 /* 5. Media Query: Tablets & Viewports (min-width: 680px)*/
