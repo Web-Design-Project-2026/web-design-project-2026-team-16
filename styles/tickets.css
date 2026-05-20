@@ -45,8 +45,8 @@
   position: relative;
   display: flex;
   overflow: hidden;
-  width: 480px;
-  height: 270px;
+  width: clamp(300px, 100%, 500px);
+  height: clamp(100px, 350px, 250px);
   border-radius: 18px;
   padding: 0 0 0 8px;
   background: var(--primary-color);
@@ -84,19 +84,16 @@
 /* Typography */
 .ticket-main h3 {
   color: var(--shadowgrey);
-  font-size: 1.95rem;
-  font-weight: bold;
   margin-bottom: 14px;
 }
 .ticket-main p {
   max-width: 240px;
   color: var(--shadowgrey);
-  font-size: 1.18rem;
   margin-bottom: 18px;
 }
 .ticket-date {
+  max-width: 150px;
   color: var(--shadowgrey);
-  font-size: 1.1rem;
   font-weight: bold;
 }
 
@@ -110,7 +107,6 @@
   border-radius: 999px;
   background: var(--secondary-color);
   color: var(--shadowgrey);
-  font-size: 1.1rem;
   font-weight: bold;
 }
 
@@ -234,5 +230,8 @@
   }
   .section-title.premium {
     padding-top: 0;
+  }
+  .ticket-date {
+    max-width: 300px;
   }
 }
