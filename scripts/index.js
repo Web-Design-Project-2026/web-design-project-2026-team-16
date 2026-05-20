@@ -18,3 +18,6 @@ if (ppButton && video) {
     lucide.createIcons();
   });
 }
+
+let header = document.querySelector("header");
+header.style.setProperty("--default-content", "''");
