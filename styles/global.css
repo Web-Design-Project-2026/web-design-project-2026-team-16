@@ -271,11 +271,11 @@ nav {
   body.home-page-active .navigation-menu a[href="index.html"] {
     color: var(--secondary-color);
   }
-}
 
-/* Hide close button */
-.close-btn-container {
-  display: none;
+  /* Hide close button */
+  .close-btn-container {
+    display: none;
+  }
 }
 
 /* Footer */
