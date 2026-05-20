@@ -34,6 +34,9 @@ tabs.forEach((tab, index) => {
 });
 
 function initialTab() {
+  if (!localStorage.getItem("selectedTab")) {
+    localStorage.setItem("selectedTab", "1");
+  }
   //Show the panel corresponding to the selected tab in localStorage
   panels.forEach((panel) => {
     panel.id[panel.id.length - 1] === localStorage.getItem("selectedTab")
