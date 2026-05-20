@@ -37,15 +37,15 @@
 /* Titles */
 .card-title {
   font-family: "Gigantic", sans-serif;
-  font-size: 20px;
+  font-size: 1.1rem;
   margin-bottom: 24px;
   color: var(--white);
 }
 
 /* Body Text */
-.card-text {
-  line-height: 1.7;
+h5 {
   color: var(--white);
+  font-weight: normal;
 }
 
 .book-marked {
@@ -63,6 +63,16 @@
   color: var(--secondary-color);
 }
 
+/* Tablet Version */
+@media screen and (min-width: 650px) {
+  h5 {
+    font-size: 1.2rem;
+  }
+  .card-title {
+    font-size: 1.2rem;
+  }
+}
+
 /* Desktop Version */
 @media (min-width: 1024px) {
   .layout {
@@ -71,5 +81,11 @@
     justify-content: center;
     column-gap: 20px;
     align-items: start;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  .card-title {
+    font-size: 0.9rem;
   }
 }
