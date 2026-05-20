@@ -168,6 +168,12 @@ nav {
   letter-spacing: 5%;
 }
 
+.copyright-details {
+  font-size: 0.75rem;
+  color: var(--white);
+  margin-top: 16px;
+}
+
 /* Desktop Version */
 @media (min-width: 1024px) {
   header {
