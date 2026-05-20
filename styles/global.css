@@ -212,10 +212,11 @@ nav {
     transform: none !important;
     width: auto;
     height: auto;
-    background: transparent;
+    background: var(--white);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 20px 0 20px;
   }
   .navigation-menu nav {
     height: auto;
@@ -225,7 +226,7 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 80px;
+    gap: 4rem;
     margin: 0;
     padding-bottom: 8px;
     height: auto;
@@ -238,7 +239,7 @@ nav {
   .navigation-menu ul li a {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0.2rem;
     text-decoration: none;
     color: var(--shadowgrey);
   }
@@ -337,5 +338,6 @@ footer {
   font-weight: 300;
 }
 .footer-column h5 {
+  color: var(--white);
   margin: 12px 0 8px 0;
 }
