@@ -172,6 +172,7 @@ nav {
 /* Desktop Version */
 @media (min-width: 1024px) {
   header {
+    --default-content: "PRE-SUMMER FESTIVAL";
     height: 96px;
     padding: 0 48px;
     justify-content: space-between;
@@ -188,7 +189,7 @@ nav {
 
   /* Center Title */
   header::after {
-    content: "PRE-SUMMER FESTIVAL";
+    content: var(--default-content);
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
