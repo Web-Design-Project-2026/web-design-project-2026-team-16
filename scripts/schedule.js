@@ -60,4 +60,21 @@ function initialTab() {
   });
 }
 
+function checkForHighlight() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const highlight = urlParams.get("highlight");
+  if (highlight) {
+    const elementToHighlight = document.querySelector(`#${highlight}`);
+    if (elementToHighlight) {
+      elementToHighlight.classList.add("highlight");
+      // Optionally, scroll to the highlighted element
+      elementToHighlight.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  }
+}
+
 initialTab();
+checkForHighlight();

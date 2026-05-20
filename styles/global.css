@@ -216,6 +216,10 @@ nav {
     padding-top: 96px;
   }
 
+  header{
+    z-index: 100;
+  }
+
   /* Desktop nav container */
   .navigation-menu {
     position: sticky;
@@ -228,7 +232,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 0 20px 0 20px;
-    /* z-index: 1; */
+    z-index: 99;
   }
   .navigation-menu nav {
     height: auto;

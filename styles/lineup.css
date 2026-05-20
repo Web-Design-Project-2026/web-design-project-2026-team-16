@@ -146,7 +146,7 @@
 /*links to schedule*/
 .linktoschedule a {
   color: var(--white);
-  padding-top: 40px;
+  padding: 40px 0 16px 0;
 }
 
 /* Base Typographic Span Config */

@@ -131,6 +131,11 @@ body {
   z-index: -1;
 }
 
+.highlight{
+  border: var(--selected-color) 1px solid;
+  box-shadow: var(--selected-color) 0px 0px 8px;
+}
+
 .schedule-block {
   background-color: var(--grey);
   color: var(--white);
