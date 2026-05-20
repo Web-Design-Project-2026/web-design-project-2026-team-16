@@ -15,7 +15,28 @@ document.querySelectorAll(".qty-btn").forEach((btn, index) => {
 
     qtyDisplay.textContent = currentQty;
     //store the quantity in localStorage using the corresponding key
-    localStorage.setItem(keys[index], currentQty);
+
+    let currentKey;
+    switch (index) {
+      case 0:
+      case 1:
+        currentKey = "3pass";
+        break;
+      case 2:
+      case 3:
+        currentKey = "1pass";
+        break;
+      case 4:
+      case 5:
+        currentKey = "3premium";
+        break;
+      case 6:
+      case 7:
+        currentKey = "1premium";
+        break;
+    }
+
+    localStorage.setItem(currentKey, currentQty);
     updateTotal();
   });
 });
@@ -61,7 +82,7 @@ function adjustCheckoutButtonPosition() {
   const overlap = Math.max(0, window.innerHeight - footerRect.top);
 
   if (overlap > 0) {
-    checkoutButton.style.bottom = `${overlap + 20 }px`;
+    checkoutButton.style.bottom = `${overlap + 20}px`;
   } else {
     checkoutButton.style.bottom = "";
   }
