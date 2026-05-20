@@ -212,9 +212,14 @@ nav {
     display: none;
   }
 
+  body {
+    padding-top: 96px;
+  }
+
   /* Desktop nav container */
   .navigation-menu {
-    position: static;
+    position: sticky;
+    top: 96px;
     transform: none !important;
     width: auto;
     height: auto;
@@ -223,6 +228,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 0 20px 0 20px;
+    /* z-index: 1; */
   }
   .navigation-menu nav {
     height: auto;
@@ -234,7 +240,7 @@ nav {
     justify-content: space-between;
     gap: 4rem;
     margin: 0;
-    padding-bottom: 8px;
+    padding: 8px 0;
     height: auto;
   }
   .navigation-menu li {
