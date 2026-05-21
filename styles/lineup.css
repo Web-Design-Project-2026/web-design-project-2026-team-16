@@ -110,7 +110,7 @@
 .image-box {
   width: 100%;
   height: 227px; /* Locks picture block height perfectly to specification specifications */
-  background-color: var(--lightgrey); /* Fallback dark block placeholder */
+  background-color: var(--lightgrey);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -190,7 +190,7 @@
   font-weight: bold;
 }
 
-/* 4. Specific Genre Theme Rules (Figma Type Attributes & Borders Applied) */
+/* 4. Specific Genre Theme Rules */
 
 /* ROCK Theme (Anton, Font Weight 400, Purple Accent Line) */
 .rock-theme .band-label {
