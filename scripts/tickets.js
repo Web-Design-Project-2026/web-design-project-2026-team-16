@@ -1,6 +1,7 @@
 const keys = ["3pass", "1pass", "3premium", "1premium", "totalTickets"];
 
 document.querySelectorAll(".qty-btn").forEach((btn, index) => {
+  // Add click event listener to each quantity button
   btn.addEventListener("click", () => {
     const isPlus =
       btn.querySelector("svg").getAttribute("data-lucide") === "plus";
@@ -16,6 +17,7 @@ document.querySelectorAll(".qty-btn").forEach((btn, index) => {
     qtyDisplay.textContent = currentQty;
     //store the quantity in localStorage using the corresponding key
 
+    // Determine which ticket type is being updated based on the button index
     let currentKey;
     switch (index) {
       case 0:
@@ -60,6 +62,7 @@ function initializeTickets() {
 }
 
 function updateTotal() {
+  //updates the total number of tickets based on all quantities of tickets
   const qtyDisplays = document.querySelectorAll(".qty-display");
   let total = 0;
 
@@ -68,10 +71,12 @@ function updateTotal() {
   });
 
   document.querySelector("#total-tickets").textContent = total;
+  //store the total in localStorage
   localStorage.setItem("totalTickets", total);
 }
 
 function adjustCheckoutButtonPosition() {
+  //Makes sure the checkout button doesn't overlap with the footer when scrolling to the bottom of the page
   const checkoutButton = document.querySelector(".checkout-btn");
   const pageFooter = document.querySelector("footer");
   if (!checkoutButton || !pageFooter) {

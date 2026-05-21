@@ -1,9 +1,6 @@
 let tabs = document.querySelectorAll(".tab-button");
 let panels = document.querySelectorAll(".schedule-panel");
 let colors = ["--rock-color", "--pop-color", "--edm-color"];
-console.log(
-  "checking panel in local storage:" + localStorage.getItem("selectedTab"),
-);
 
 tabs.forEach((tab, index) => {
   tab.addEventListener("click", () => {
@@ -25,6 +22,7 @@ tabs.forEach((tab, index) => {
     panel.tabIndex = 0;
     panel.hidden = false;
 
+    // Set the color based on the selected tab
     let selected = panel.id[panel.id.length - 1];
     document.documentElement.style.setProperty(
       "--selected-color",
@@ -42,7 +40,7 @@ function initialTab() {
     panel.id[panel.id.length - 1] === localStorage.getItem("selectedTab")
       ? (panel.hidden = false)
       : (panel.hidden = true);
-  }); // Hide all panels initially
+  }); 
 
   // Set the correct color
   document.documentElement.style.setProperty(
@@ -67,7 +65,7 @@ function checkForHighlight() {
     const elementToHighlight = document.querySelector(`#${highlight}`);
     if (elementToHighlight) {
       elementToHighlight.classList.add("highlight");
-      // Optionally, scroll to the highlighted element
+      //Scroll to the highlighted element
       elementToHighlight.scrollIntoView({
         behavior: "smooth",
         block: "center",
