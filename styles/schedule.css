@@ -1,0 +1,252 @@
+:root {
+  --selected-color: var(--rock-color);
+}
+
+body {
+  background: var(--lightgrey);
+}
+
+.tab-button[aria-selected="true"] {
+  background-color: var(--selected-color);
+  color: var(--white);
+  padding-top: 16px;
+}
+
+.tab-button[aria-selected="false"] {
+  background-color: var(--shadowgrey);
+  color: var(--white);
+}
+
+.day-tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 32px;
+  align-items: end;
+}
+
+.tab-button {
+  color: var(--white);
+  background-color: var(--shadowgrey);
+  border: none;
+  padding: 8px 24px 16px 24px;
+  border-radius: 32px 32px 0px 0px;
+  font-weight: 500;
+  font-size: 1.33rem;
+}
+
+.selected-color {
+  color: var(--selected-color);
+}
+
+.schedule-container {
+  position: relative;
+  z-index: 1;
+  background-color: var(--shadowgrey);
+  box-shadow: var(--selected-color) 0px -4px 4px;
+  border-radius: 20px 20px 0px 00px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px;
+  padding-bottom: 96px;
+}
+
+.rock-header {
+  color: var(--white);
+  font-family: "Anton", sans-serif;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.pop-header {
+  color: var(--white);
+  font-family: montserrat-alternates, sans-serif;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.edm-header {
+  color: var(--white);
+  font-family: strelka, sans-serif;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.main-artist {
+  display: flex;
+  background-color: var(--grey);
+  flex-direction: column;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.main-artist h3 {
+  padding: 8px 0 0 16px;
+  text-align: left;
+}
+
+.main-artist img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.schedule-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.schedule-panel[hidden] {
+  display: none;
+}
+
+.timeline-container {
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline-container h3 {
+  margin: 4px 0 4px 0;
+}
+
+.line-container {
+  position: relative;
+}
+
+/* Line */
+.line-container::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  left: 50%;
+  width: 4px;
+  background: var(--selected-color);
+  border-radius: 999px;
+  z-index: -1;
+}
+
+.highlight{
+  border: var(--selected-color) 1px solid;
+  box-shadow: var(--selected-color) 0px 0px 8px;
+}
+
+.schedule-block {
+  background-color: var(--grey);
+  color: var(--white);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  padding: 12px;
+  border-radius: 12px;
+  margin: 16px 0 16px 0;
+  gap: 16px;
+}
+
+.schedule-block h4 {
+  margin-bottom: 8px;
+}
+
+.schedule-block img {
+  height: 96px;
+  width: 96px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.schedule-block-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 12px;
+}
+
+.time,
+.location {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Desktop Version */
+@media (min-width: 1024px) {
+  .schedule-panel {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+  /* Title */
+  .schedule-panel > h2,
+  .schedule-panel > h3 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 16px;
+  }
+  /* Left side */
+  .main-artist {
+    grid-column: 1;
+    position: sticky;
+    top: 24px;
+    overflow: hidden;
+  }
+  .main-artist img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+  .main-artist h3 {
+    font-size: 2rem;
+    padding: 8px 16px;
+  }
+  /* Right side */
+  .line-container {
+    grid-column: 2;
+    position: relative;
+  }
+  /* Timeline line */
+  .line-container::before {
+    content: "";
+    position: absolute;
+    top: 46px;
+    bottom: 34px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    background: var(--selected-color);
+    border-radius: 999px;
+    z-index: 0;
+  }
+  .timeline-container {
+    margin-bottom: 24px;
+  }
+  .timeline-container h3 {
+    font-size: 2rem;
+  }
+  /* Timeline cards */
+  .schedule-block {
+    grid-template-columns: 230px 1fr;
+    padding: 16px;
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 1;
+  }
+  .schedule-block img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .schedule-block-info h4 {
+    font-size: 2rem;
+  }
+  .schedule-block-info p {
+    font-size: 1.2rem;
+  }
+}

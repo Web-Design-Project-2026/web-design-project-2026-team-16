@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PreSummerFestival</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/map.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/bap7jyo.css" />
+    <!-- javascript -->
+    <script src="scripts/global.js" defer></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@0.574.0/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/lucide@0.574.0"></script>
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/dfaa1558af.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="map-page-active">
+    <header>
+      <div class="logo-container">
+        <a href="index.html">
+          <img
+            src="assets/images/PSF Logo.png"
+            alt="PreSummerFestival Logo"
+            class="logo"
+          />
+        </a>
+      </div>
+      <h1 class="page-name">Map</h1>
+      <div class="menu-btn-container">
+        <button class="menu-btn js-nav-toggle" title="Open navigation menu">
+          <i data-lucide="menu" stroke-width="1"></i>
+        </button>
+      </div>
+    </header>
+
+    <aside class="navigation-menu">
+      <nav>
+        <div class="close-btn-container js-nav-toggle">
+          <i data-lucide="x" stroke-width="1" class="menu-close-btn"></i>
+        </div>
+        <ul>
+          <li>
+            <a href="index.html">
+              <i data-lucide="house"></i>
+              <span class="nav-text">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="tickets.html">
+              <i data-lucide="ticket-plus"></i>
+              <span class="nav-text">Tickets</span>
+            </a>
+          </li>
+          <li>
+            <a href="schedule.html">
+              <i data-lucide="calendar-clock"></i>
+              <span class="nav-text">Schedule</span>
+            </a>
+          </li>
+          <li>
+            <a href="map.html">
+              <i data-lucide="map"></i>
+              <span class="nav-text">Map</span>
+            </a>
+          </li>
+          <li>
+            <a href="rules.html">
+              <i data-lucide="hand-heart"></i>
+              <span class="nav-text">Rules</span>
+            </a>
+          </li>
+          <li>
+            <a href="lineup.html">
+              <i data-lucide="list-music"></i>
+              <span class="nav-text">Line-Up</span>
+            </a>
+          </li>
+          <li>
+            <a href="aboutus.html">
+              <i data-lucide="info"></i>
+              <span class="nav-text">About Us</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- start with the page content here -->
+    <main class="map-page">
+      <div class="content-bg"></div>
+      <div class="layout">
+      <!-- Map Card -->
+      <section class="map-card">
+        <h3 class="map-title">PRE-SUMMER FESTIVAL</h3>
+        <h4 class="map-subtitle">AREA MAP</h4>
+        <img
+          class="festival-map"
+          src="assets/images/map-picture.png"
+          alt="Festival Map"
+        />
+        <!-- Map Legend -->
+        <section class="legend-grid">
+          <div class="legend-column">
+            <div class="legend-row">
+              <div class="legend-left">
+                <div class="legend-icon rock">
+                    <i data-lucide="guitar"></i>
+                </div>
+                <h5>Rock Stage</h5>
+            </div>
+              <div class="legend-right">
+                <i data-lucide="map-pin" class="pin rock-pin"></i>
+                <h5 class="rock-text">The Plaza</h5>
+              </div>
+            </div>
+            <div class="legend-row">
+              <div class="legend-left">
+                <div class="legend-icon pop">
+                    <i data-lucide="music"></i>
+                </div>
+                <h5>Pop Stage</h5>
+              </div>
+              <div class="legend-right">
+                <i data-lucide="map-pin" class="pin pop-pin"></i>
+                <h5 class="pop-text">Beach alley</h5>
+              </div>
+            </div>
+            <div class="legend-row">
+              <div class="legend-left">
+                <div class="legend-icon edm">
+                    <i data-lucide="zap"></i>
+                </div>
+                <h5>EDM Stage</h5>
+              </div>
+              <div class="legend-right">
+                <i data-lucide="map-pin" class="pin edm-pin"></i>
+                <h5 class="edm-text">Harbor</h5>
+              </div>
+            </div>
+            <div class="legend-row">
+              <div class="legend-left">
+                <div class="legend-icon vip">
+                    <i data-lucide="star"></i>
+                </div>
+                <h5>VIP Area</h5>
+              </div>
+              <div class="legend-right">
+                <i data-lucide="map-pin" class="pin vip-pin"></i>
+                <h5 class="vip-text">Short Shore</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Bottom Grid -->
+          <div class="facility-grid">
+  <div class="facility-item">
+    <div class="legend-row">
+      <div class="legend-left">
+        <div class="legend-icon toilet">
+          <i data-lucide="toilet"></i>
+        </div>
+        <h5>Toilets</h5>
+      </div>
+    </div>
+  </div>
+  <div class="facility-item">
+    <div class="legend-row">
+      <div class="legend-right">
+        <div class="legend-icon parking">
+          <i data-lucide="parking-circle"></i>
+        </div>
+        <h5>Parking</h5>
+      </div>
+    </div>
+  </div>
+  <div class="facility-item">
+    <div class="legend-row">
+      <div class="legend-left">
+        <div class="legend-icon food">
+          <i data-lucide="utensils"></i>
+        </div>
+        <h5>Food & Drinks</h5>
+      </div>
+    </div>
+  </div>
+  <div class="facility-item">
+    <div class="legend-row">
+      <div class="legend-right">
+        <div class="legend-icon camping">
+          <i data-lucide="caravan"></i>
+        </div>
+        <h5>Camping</h5>
+      </div>
+    </div>
+  </div>
+</div>
+        </section>
+        <!-- Print Button -->
+        <button class="print-btn" id="printMapBtn">
+          <i data-lucide="printer" class="print-icon"></i>
+          <span>Print Map</span>
+        </button>
+      </section>
+      <!-- Travel Guide -->
+      <section class="travel-card">
+        <h3 class="travel-header">Travel Guide</h3>
+        <div class="travel-content">
+          <!-- Step 1 -->
+          <div class="step">
+            <h5 class="step-number">1</h5>
+            <div class="step-text">
+              <div class="travel-row">
+                <i data-lucide="plane" class="travel-icon"></i>
+                <div>
+                  <h4>Göteborg Landvetter Airport (GOT)</h4>
+                  <p>Distance: ~170 km to Visingsö</p>
+                  <h4>Stockholm Arlanda Airport (ARN)</h4>
+                  <p>Distance: ~300 km to Visingsö</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Step 2 -->
+          <div class="step">
+            <h5 class="step-number">2</h5>
+            <div class="travel-row">
+              <i data-lucide="car-front" class="travel-icon"></i>
+              <div class="extra-icons">
+                <i data-lucide="recycle" class="recycle-icon"></i>
+                <i data-lucide="bus" class="bus-icon"></i>
+              </div>
+              <div class="step-text">
+                <div class="travel-times">
+                  <div>
+                    <h4>(GOT) - Gränna</h4>
+                    <p>Time: ~2 hours</p>
+                    <h4>(ARN) - Gränna</h4>
+                    <p>Time: ~4 hours</p>
+                  </div>
+                </div>
+                <p class="travel-note">Sustainable travel is encouraged.</p>
+                <button class="travel-link" id="transportInfoBtn">
+                  Public transport info
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Step 3 -->
+          <div class="step">
+            <h5 class="step-number">3</h5>
+            <div class="step-text">
+              <div class="travel-row">
+                <i data-lucide="ship" class="travel-icon"></i>
+                <div>
+                  <h4>Gränna - Visingsö</h4>
+                  <p>Time: ~30 minutes</p>
+                  <p class="travel-note">Ferries run regularly all day.</p>
+                  <button class="travel-link" id="ferryBtn">
+                    Ferry timetable
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-socials">
+        <a href="#">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+      </div>
+      <div class="footer-branding">
+        <h4 class="footer-title">©PRE-SUMMER FESTIVAL</h4>
+        <p class="footer-location">1 June - 3 June | Visingsö, Sweden</p>
+      </div>
+      <div class="footer-links">
+        <section class="footer-column">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </section>
+        <section class="footer-column">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </section>
+        <section class="footer-column">
+          <h5>Help</h5>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </section>
+      </div>
+      <p class="copyright-details">
+        All third-party assets used in this project are properly licensed or
+        fall under open-source / royalty-free usage agreements.
+      </p>
+    </footer>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

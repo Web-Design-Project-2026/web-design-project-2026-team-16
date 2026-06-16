@@ -1,0 +1,93 @@
+.rules-page {
+  position: relative;
+  padding: 48px 16px 48px;
+  background: var(--lightgrey);
+  overflow: hidden;
+}
+
+/* Background */
+.content-bg {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 28px);
+  background: var(--shadowgrey);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0 -4px 4px var(--primary-color);
+  z-index: 0;
+}
+.layout {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+/* Rules */
+.rule-card {
+  background: var(--grey);
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* Icon */
+.rule {
+  padding: 10px;
+  background: var(--lightgrey);
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.rule svg {
+  width: 100px;
+  height: 100px;
+  color: var(--white);
+}
+
+/* Content */
+.rule-content {
+  flex: 1;
+  position: relative;
+}
+.rule-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.8px;
+  color: var(--white);
+  padding-right: 36px;
+}
+
+/* Number Badge */
+.rule-number {
+  width: 24px;
+  height: 24px;
+  background: var(--primary-color);
+  color: var(--shadowgrey);
+  border-radius: 50%;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* Desktop Version */
+@media (min-width: 1024px) {
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 32px;
+    align-items: start;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(4, auto);
+  }
+  .rule-card {
+    margin-bottom: 0;
+  }
+}

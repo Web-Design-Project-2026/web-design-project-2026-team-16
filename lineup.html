@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PreSummerFestival - Line-Up</title>
+
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/lineup.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/bap7jyo.css" />
+    <script src="scripts/global.js" defer></script>
+
+    <script src="https://unpkg.com/lucide@0.574.0/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/lucide@0.574.0"></script>
+
+    <script
+      src="https://kit.fontawesome.com/dfaa1558af.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="lineup-page-active">
+    <header>
+      <div class="logo-container">
+        <a href="index.html">
+          <img
+            src="assets/images/PSF Logo.png"
+            alt="PreSummerFestival Logo, Logo of a smiley face with sunglasses, in a summer like orange dark color."
+            class="logo"
+          />
+        </a>
+      </div>
+      <h1 class="page-name">Line-Up</h1>
+      <div class="menu-btn-container">
+        <button class="menu-btn js-nav-toggle" title="Open navigation menu">
+          <i data-lucide="menu" stroke-width="1"></i>
+        </button>
+      </div>
+    </header>
+
+    <aside class="navigation-menu">
+      <nav aria-label="Main navigation">
+        <div class="close-btn-container js-nav-toggle">
+          <i data-lucide="x" stroke-width="1" class="menu-close-btn"></i>
+        </div>
+        <ul>
+          <li>
+            <a href="index.html">
+              <i data-lucide="house"></i>
+              <span class="nav-text">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="tickets.html">
+              <i data-lucide="ticket-plus"></i>
+              <span class="nav-text">Tickets</span>
+            </a>
+          </li>
+          <li>
+            <a href="schedule.html">
+              <i data-lucide="calendar-clock"></i>
+              <span class="nav-text">Schedule</span>
+            </a>
+          </li>
+          <li>
+            <a href="map.html">
+              <i data-lucide="map"></i>
+              <span class="nav-text">Map</span>
+            </a>
+          </li>
+          <li>
+            <a href="rules.html">
+              <i data-lucide="hand-heart"></i>
+              <span class="nav-text">Rules</span>
+            </a>
+          </li>
+          <li>
+            <a href="lineup.html">
+              <i data-lucide="list-music"></i>
+              <span class="nav-text">Line-Up</span>
+            </a>
+          </li>
+          <li>
+            <a href="aboutus.html">
+              <i data-lucide="info"></i>
+              <span class="nav-text">About Us</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="lineup-main-content">
+      <div class="lineup-grid">
+        <div
+          class="artist-card-container"
+          onclick="this.classList.toggle('flipped')"
+        >
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="image-box">
+                <img
+                  src="assets/imagesLineup/sharpblades.png"
+                  alt="a heavy rock band of 5 people called SharpBlades, wearing leather jackets and having black outfits with black eye make-up, standing on stage."
+                />
+              </div>
+              <div class="band-label rock-header">SharpBlades</div>
+            </div>
+            <div class="card-back rock-border">
+              <h3 class="rocktitle">SharpBlades</h3>
+              <p>
+                Raw riffs, sharp energy, and a sound that cuts straight through
+                the noise
+              </p>
+              <p class="linktoschedule">
+                <a href="schedule.html?highlight=sharpblades" onclick="localStorage.setItem('selectedTab', 1)">View in schedule</a>
+              </p>
+              <p class="socials"></p>
+              <p><!--blankspace--></p>
+              <div class="footer-socials">
+                <a href="#">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+              <span class="genre-tag tag-rock">ROCK</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="artist-card-container"
+          onclick="this.classList.toggle('flipped')"
+        >
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="image-box">
+                <img
+                  src="assets/imagesLineup/selfless.png"
+                  alt="A pop band called Selfless, picture of the band performing on the stage."
+                />
+              </div>
+              <div class="band-label pop-header">Selfless</div>
+            </div>
+            <div class="card-back pop-border">
+              <h3 class="poptitle">Selfless</h3>
+              <p>
+                Emotional pop anthems with heartfelt lyrics and powerful vocals.
+              </p>
+              <p class="linktoschedule">
+                <a href="schedule.html?highlight=selfless" onclick="localStorage.setItem('selectedTab', 2)">View in schedule</a>
+              </p>
+              <p class="socials"></p>
+              <p><!--blankspace--></p>
+              <div class="footer-socials">
+                <a href="#">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+              <span class="genre-tag tag-pop">POP</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="artist-card-container"
+          onclick="this.classList.toggle('flipped')"
+        >
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="image-box">
+                <img
+                  src="assets/imagesLineup/flipflex.jpeg"
+                  alt="picture of a dj FlipFlex wearing a mask"
+                />
+              </div>
+              <div class="band-label edm-header">FlipFlex</div>
+            </div>
+            <div class="card-back edm-border">
+              <h3 class="edmtitle">FlipFlex</h3>
+              <p>
+                High-energy beats and drops designed to keep the crowd moving
+                all night.
+              </p>
+              <p class="linktoschedule">
+                <a href="schedule.html?highlight=flipflex" onclick="localStorage.setItem('selectedTab', 3)">View in schedule</a>
+              </p>
+              <p class="socials"></p>
+              <p><!--blankspace--></p>
+              <div class="footer-socials">
+                <a href="#">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+              <span class="genre-tag tag-edm">EDM</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="artist-card-container"
+          onclick="this.classList.toggle('flipped')"
+        >
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="image-box">
+                <img
+                  src="assets/imagesLineup/disturbance.png"
+                  alt="a picture of a 6 people band called Disturbance, standing in a garage with the instruments."
+                />
+              </div>
+              <div class="band-label rock-header">Disturbance</div>
+            </div>
+            <div class="card-back rock-border">
+              <h3 class="rocktitle">Disturbance</h3>
+              <p>
+                Heavy, unapologetic rock with explosive live performances and
+                gritty attitude.
+              </p>
+              <p class="linktoschedule">
+                <a href="schedule.html?highlight=disturbance" onclick="localStorage.setItem('selectedTab', 1)">View in schedule</a>
+              </p>
+              <p class="socials"></p>
+              <p><!--blankspace--></p>
+              <div class="footer-socials">
+                <a href="#">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+              <span class="genre-tag tag-rock">ROCK</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="artist-card-container"
+          onclick="this.classList.toggle('flipped')"
+        >
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="image-box">
+                <img
+                  src="assets/imagesLineup/mollythebeast.png"
+                  alt="Molly The Beast a girl band performing on stage, singing."
+                />
+              </div>
+              <div class="band-label pop-header">Molly The Beast</div>
+            </div>
+            <div class="card-back pop-border">
+              <h3 class="poptitle">Molly The Beast</h3>
+              <p>
+                Bold, energetic pop with attitude, confidence, and unforgettable
+                hooks.
+              </p>
+              <p class="linktoschedule">
+                <a href="schedule.html?highlight=mollythebeast" onclick="localStorage.setItem('selectedTab', 2)">View in schedule</a>
+              </p>
+              <p class="socials"></p>
+              <p><!--blankspace--></p>
+              <div class="footer-socials">
+                <a href="#">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+              <span class="genre-tag tag-pop">POP</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="artist-card-container"
+          onclick="this.classList.toggle('flipped')"
+        >
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="image-box">
+                <img
+                  src="assets/imagesLineup/mrinternational.jpeg"
+                  alt="a picture of dj Mr. International, behind a mixing-pult, with his headphones on."
+                />
+              </div>
+              <div class="band-label edm-header">Mr. International</div>
+            </div>
+            <div class="card-back edm-border">
+              <h3 class="edmtitle">Mr. International</h3>
+              <p>
+                A global sound blending house, dance, and club rhythms from
+                around the world.
+              </p>
+              <p class="linktoschedule">
+                <a href="schedule.html?highlight=mrinternational" onclick="localStorage.setItem('selectedTab', 3) ">View in schedule</a>
+              </p>
+              <p class="socials"></p>
+              <p><!--blankspace--></p>
+              <div class="footer-socials">
+                <a href="#">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+              <span class="genre-tag tag-edm">EDM</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="artist-card-container"
+          onclick="this.classList.toggle('flipped')"
+        >
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="image-box">
+                <img
+                  src="assets/imagesLineup/methamorphosis.png"
+                  alt="a picture of a drummer and a guitarist performing on stage."
+                />
+              </div>
+              <div class="band-label rock-header">Methamorphosis</div>
+            </div>
+            <div class="card-back rock-border">
+              <h3 class="rocktitle">Methamorphosis</h3>
+              <p>
+                A dynamic fusion of classic and modern rock, constatnly evolving
+                on stage.
+              </p>
+              <p class="linktoschedule">
+                <a href="schedule.html?highlight=methamorphosis" onclick="localStorage.setItem('selectedTab', 1)">View in schedule</a>
+              </p>
+              <p class="socials"></p>
+              <p><!--blankspace--></p>
+              <div class="footer-socials">
+                <a href="#">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+              <span class="genre-tag tag-rock">ROCK</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="artist-card-container"
+          onclick="this.classList.toggle('flipped')"
+        >
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="image-box">
+                <img
+                  src="assets/imagesLineup/thebarbenheimers.png"
+                  alt="The BarbenHeimers, three artists performing on stage, singing, dressed in pink suits."
+                />
+              </div>
+              <div class="band-label pop-header">The BarbenHeimers</div>
+            </div>
+            <div class="card-back pop-border">
+              <h3 class="poptitle">The BarbenHeimers</h3>
+              <p>
+                Playful, high-energy pop blending contrast, chaos, and catchy
+                melodies.
+              </p>
+              <p class="linktoschedule">
+                <a href="schedule.html?highlight=thebarbenheimers" onclick="localStorage.setItem('selectedTab', 2)">View in schedule</a>
+              </p>
+              <p class="socials"></p>
+              <p><!--blankspace--></p>
+              <div class="footer-socials">
+                <a href="#">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+              <span class="genre-tag tag-pop">POP</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="artist-card-container"
+          onclick="this.classList.toggle('flipped')"
+        >
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="image-box">
+                <img
+                  src="assets/imagesLineup/thesmogmakers.jpeg"
+                  alt="a picture of The smogmakers, two edm dj girls, one wearing a pink and the other a blur wig with the outfit."
+                />
+              </div>
+              <div class="band-label edm-header">The smogmakers</div>
+            </div>
+            <div class="card-back edm-border">
+              <h3 class="edmtitle">The smogmakers</h3>
+              <p>Dark, bass-heavy electronic music with an underground edge.</p>
+              <p class="linktoschedule">
+                <a href="schedule.html?highlight=thesmogmakers" onclick="localStorage.setItem('selectedTab', 3)">View in schedule</a>
+              </p>
+              <p class="socials"></p>
+              <p><!--blankspace--></p>
+              <div class="footer-socials">
+                <a href="#">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+              <span class="genre-tag tag-edm">EDM</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="artist-card-container"
+          onclick="this.classList.toggle('flipped')"
+        >
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="image-box">
+                <img
+                  src="assets/imagesLineup/hypnosisband.png"
+                  alt="a picture of the Hypnosis Band, seven people band posing for the album cover."
+                />
+              </div>
+              <div class="band-label rock-header">Hypnosis Band</div>
+            </div>
+            <div class="card-back rock-border">
+              <h3 class="rocktitle">Hypnosis Band</h3>
+              <p>
+                Dark, immersive rock grooves that pull you into a hypnotic sonic
+                atmosphere.
+              </p>
+              <p class="linktoschedule">
+                <a href="schedule.html?highlight=hypnosisband" onclick="localStorage.setItem('selectedTab', 1)">View in schedule</a>
+              </p>
+              <p class="socials"></p>
+              <p><!--blankspace--></p>
+              <div class="footer-socials">
+                <a href="#">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+              <span class="genre-tag tag-rock">ROCK</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="artist-card-container"
+          onclick="this.classList.toggle('flipped')"
+        >
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="image-box">
+                <img
+                  src="assets/imagesLineup/rhythmguardians.png"
+                  alt="a picture of a four people band called Rhythm Guardians, performing on stage"
+                />
+              </div>
+              <div class="band-label pop-header">Rhythm Guardians</div>
+            </div>
+            <div class="card-back pop-border">
+              <h3 class="poptitle">Rhythm Guardians</h3>
+              <p>
+                Uplifting pop sounds driven by rhythm, harmony, and feel-good
+                vibes.
+              </p>
+              <p class="linktoschedule">
+                <a href="schedule.html?highlight=rhythmguardians" onclick="localStorage.setItem('selectedTab', 2)">View in schedule</a>
+              </p>
+              <p class="socials"></p>
+              <p><!--blankspace--></p>
+              <div class="footer-socials">
+                <a href="#">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+              <span class="genre-tag tag-pop">POP</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="artist-card-container"
+          onclick="this.classList.toggle('flipped')"
+        >
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="image-box">
+                <img
+                  src="assets/imagesLineup/djamnesia.jpeg"
+                  alt="a picture of an edm DJ Amnesia, performing, while standing behid his mixing-pult."
+                />
+              </div>
+              <div class="band-label edm-header">DJ Amnesia</div>
+            </div>
+            <div class="card-back edm-border">
+              <h3 class="edmtitle">DJ Amnesia</h3>
+              <p>
+                Lose yourself in hypnotic beats and late-night festival energy.
+              </p>
+              <p class="linktoschedule">
+                <a href="schedule.html?highlight=djamnesia" onclick="localStorage.setItem('selectedTab', 3)">View in schedule</a>
+              </p>
+              <p class="socials"></p>
+              <p><!--blankspace--></p>
+              <div class="footer-socials">
+                <a href="#">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a href="#">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+              <span class="genre-tag tag-edm">EDM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+
+      <div class="footer-branding">
+        <h4 class="footer-title">©PRE-SUMMER FESTIVAL</h4>
+        <p class="footer-location">1 June - 3 June | Visingsö, Sweden</p>
+      </div>
+
+      <div class="footer-links">
+        <section class="footer-column">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </section>
+
+        <section class="footer-column">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </section>
+
+        <section class="footer-column">
+          <h5>Help</h5>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </section>
+      </div>
+      <p class="copyright-details">
+        All third-party assets used in this project are properly licensed or
+        fall under open-source / royalty-free usage agreements.
+      </p>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

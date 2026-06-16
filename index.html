@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PreSummerFestival</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/bap7jyo.css" />
+    <!-- javascript -->
+    <script src="scripts/global.js" defer></script>
+    <script src="scripts/index.js" defer></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@0.574.0/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/lucide@0.574.0"></script>
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/dfaa1558af.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="home-page-active">
+    <header>
+      <div class="logo-container">
+        <a href="index.html">
+          <img
+            src="assets/images/PSF Logo.png"
+            alt="PreSummerFestival Logo, Logo of a smiley face with sunglasses, in a summer like orange dark color.""
+            class="logo"
+          />
+        </a>
+      </div>
+      <h1 class="page-name">Home</h1>
+      <div class="menu-btn-container">
+        <button class="menu-btn js-nav-toggle" title="Open navigation menu">
+          <i data-lucide="menu" stroke-width="1"></i>
+        </button>
+      </div>
+    </header>
+
+    <aside class="navigation-menu">
+      <nav aria-label="Main navigation">
+        <div class="close-btn-container js-nav-toggle">
+          <i data-lucide="x" stroke-width="1" class="menu-close-btn"></i>
+        </div>
+        <ul>
+          <li>
+            <a href="index.html">
+              <i data-lucide="house"></i>
+              <span class="nav-text">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="tickets.html">
+              <i data-lucide="ticket-plus"></i>
+              <span class="nav-text">Tickets</span>
+            </a>
+          </li>
+          <li>
+            <a href="schedule.html">
+              <i data-lucide="calendar-clock"></i>
+              <span class="nav-text">Schedule</span>
+            </a>
+          </li>
+          <li>
+            <a href="map.html">
+              <i data-lucide="map"></i>
+              <span class="nav-text">Map</span>
+            </a>
+          </li>
+          <li>
+            <a href="rules.html">
+              <i data-lucide="hand-heart"></i>
+              <span class="nav-text">Rules</span>
+            </a>
+          </li>
+          <li>
+            <a href="lineup.html">
+              <i data-lucide="list-music"></i>
+              <span class="nav-text">Line-Up</span>
+            </a>
+          </li>
+          <li>
+            <a href="aboutus.html">
+              <i data-lucide="info"></i>
+              <span class="nav-text">About Us</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <!-- start with the page content here -->
+    <main class="home-main-content">
+      <section class="hero-showcase">
+        <video
+          src="assets/videos/psf-hero-video-no-grain.mp4"
+          aria-label="a video of a concert area with a stage, people dancing while artists are performing on stage. The video shows different angles of the stage and the fans."
+          muted
+          autoplay
+          loop
+        ></video>
+        <button id="pause-play-btn" type="button" aria-label="Pause video">
+          <i data-lucide="pause"></i>
+        </button>
+        <div class="hero-inner-frame">
+          <h1 class="hero-main-title">PRE-SUMMER FESTIVAL</h1>
+          <p class="hero-date-line">1 June - 3 June</p>
+          <p class="hero-sub-location">Visingsö, Sweden</p>
+
+          <div class="hero-cta-group">
+            <a href="tickets.html" class="action-btn btn-blue"
+              >Buy Tickets Here!</a
+            >
+            <a href="schedule.html" class="action-btn btn-blue">
+              <i class="fa-regular fa-calendar-days"></i> Schedule
+            </a>
+            <a href="map.html" class="action-btn btn-blue">
+              <i class="fa-solid fa-map"></i> Map
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div class="festival-info-grid">
+        <section class="info-card">
+          <div class="card-header">
+            <h2>3 Days</h2>
+            <span class="card-meta-accent-blue">1 June - 3 June</span>
+          </div>
+          <div class="card-content-wrapper">
+            <p>
+              Three full days of music, energy, and unforgettable moments. From
+              the first set in daylight to the final drop at night, every day
+              builds on the last. Come for a moment — stay for the entire
+              journey.
+            </p>
+            <a href="schedule.html" class="action-btn btn-orange"
+              >View Schedule</a
+            >
+          </div>
+        </section>
+
+        <section class="info-card">
+          <div class="card-header">
+            <h2>3 Genres</h2>
+            <span class="card-meta-accent-blue">ROCK POP EDM</span>
+          </div>
+          <div class="card-content-wrapper">
+            <p>
+              A carefully curated mix of genres across three days — Day 1 is
+              rock, Day 2 is pop, and Day 3 is EDM, each bringing its own sound,
+              crowd, and atmosphere. Move between stages and discover something
+              new, or stay where it hits right. Different styles, one cohesive
+              experience.
+            </p>
+            <a href="lineup.html" class="action-btn btn-orange"
+              >Explore Line-Up</a
+            >
+          </div>
+        </section>
+
+        <section class="info-card">
+          <div class="card-header">
+            <h2>1 Festival</h2>
+            <span class="card-meta-accent-blue">Visingsö</span>
+          </div>
+          <div class="card-content-wrapper">
+            <p>
+              More than just performances — this is one shared space where
+              everything comes together. One crowd, one atmosphere, one
+              experience you carry with you long after it ends. This is what
+              it's all about.
+            </p>
+            <a href="aboutus.html" class="action-btn btn-orange">About Us</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-socials">
+        <a href="#">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+      </div>
+
+      <div class="footer-branding">
+        <h4 class="footer-title">©PRE-SUMMER FESTIVAL</h4>
+
+        <p class="footer-location">1 June - 3 June | Visingsö, Sweden</p>
+      </div>
+
+      <div class="footer-links">
+        <section class="footer-column">
+          <h5>Company</h5>
+
+          <ul>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </section>
+
+        <section class="footer-column">
+          <h5>Legal</h5>
+
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </section>
+
+        <section class="footer-column">
+          <h5>Help</h5>
+
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </section>
+      </div>
+      <p class="copyright-details">
+        All third-party assets used in this project are properly licensed or
+        fall under open-source / royalty-free usage agreements.
+      </p>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
